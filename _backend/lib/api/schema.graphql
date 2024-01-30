@@ -1,0 +1,52 @@
+type Query {
+	getGame(id: ID!): Game
+	listGames: [Game]!
+}
+
+type Mutation {
+	createGame(input: CreateGameInput): Game
+	updateAndPublishGameEvent(input: PublishGameEventInput): Game
+		@aws_cognito_user_pools
+}
+
+type Subscription {
+	onUpdateAndPublishGameEvent: Game
+		@aws_cognito_user_pools
+		@aws_subscribe(mutations: ["updateAndPublishGameEvent"])
+}
+
+type Game {
+	id: ID!
+	createdAt: AWSDateTime!
+	updatedAt: AWSDateTime!
+	name: String!
+	homeTeam: Team!
+	awayTeam: Team!
+	homeTeamScore: Int
+	awayTeamScore: Int
+}
+
+type Team {
+	teamId: String!
+	name: String!
+	picId: String!
+}
+
+input CreateGameInput {
+	name: String!
+	homeTeam: TeamIput!
+	awayTeam: TeamIput!
+}
+
+input TeamIput {
+	teamId: String!
+	name: String!
+	picId: String!
+}
+
+input PublishGameEventInput {
+	id: String!
+	homeTeamScore: Int
+	awayTeamScore: Int
+	currentMessage: String
+}
