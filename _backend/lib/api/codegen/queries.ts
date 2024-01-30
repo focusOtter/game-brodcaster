@@ -28,6 +28,7 @@ export const getGame = /* GraphQL */ `query GetGame($id: ID!) {
     }
     homeTeamScore
     awayTeamScore
+    currentMessage
     __typename
   }
 }
@@ -52,6 +53,7 @@ export const listGames = /* GraphQL */ `query ListGames {
     }
     homeTeamScore
     awayTeamScore
+    currentMessage
     __typename
   }
 }

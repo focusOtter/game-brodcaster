@@ -20,9 +20,14 @@ export function request(ctx: Context): PutEventsRequest {
 		events: [
 			{
 				source: ctx.stash.eventBridgeSource,
-				detailType: 'GameUpdated',
+				detailType: ctx.stash.eventBridgeDetailType,
 				detail: { ...ctx.prev.result },
 			},
 		],
 	}
+}
+
+export function response(ctx: Context) {
+	console.log('the result of the publish to eb', ctx.result)
+	return ctx.prev.result
 }

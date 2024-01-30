@@ -28,6 +28,7 @@ export const onUpdateAndPublishGameEvent = /* GraphQL */ `subscription OnUpdateA
     }
     homeTeamScore
     awayTeamScore
+    currentMessage
     __typename
   }
 }

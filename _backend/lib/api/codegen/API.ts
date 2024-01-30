@@ -22,8 +22,9 @@ export type Game = {
   name: string,
   homeTeam: Team,
   awayTeam: Team,
-  homeTeamScore?: number | null,
-  awayTeamScore?: number | null,
+  homeTeamScore: number,
+  awayTeamScore: number,
+  currentMessage?: string | null,
 };
 
 export type Team = {
@@ -35,13 +36,13 @@ export type Team = {
 
 export type PublishGameEventInput = {
   id: string,
-  homeTeamScore?: number | null,
-  awayTeamScore?: number | null,
-  currentMessage?: string | null,
+  homeTeamScore: number,
+  awayTeamScore: number,
+  currentMessage: string,
 };
 
 export type CreateGameMutationVariables = {
-  input?: CreateGameInput | null,
+  input: CreateGameInput,
 };
 
 export type CreateGameMutation = {
@@ -63,13 +64,14 @@ export type CreateGameMutation = {
       name: string,
       picId: string,
     },
-    homeTeamScore?: number | null,
-    awayTeamScore?: number | null,
+    homeTeamScore: number,
+    awayTeamScore: number,
+    currentMessage?: string | null,
   } | null,
 };
 
 export type UpdateAndPublishGameEventMutationVariables = {
-  input?: PublishGameEventInput | null,
+  input: PublishGameEventInput,
 };
 
 export type UpdateAndPublishGameEventMutation = {
@@ -91,8 +93,9 @@ export type UpdateAndPublishGameEventMutation = {
       name: string,
       picId: string,
     },
-    homeTeamScore?: number | null,
-    awayTeamScore?: number | null,
+    homeTeamScore: number,
+    awayTeamScore: number,
+    currentMessage?: string | null,
   } | null,
 };
 
@@ -119,8 +122,9 @@ export type GetGameQuery = {
       name: string,
       picId: string,
     },
-    homeTeamScore?: number | null,
-    awayTeamScore?: number | null,
+    homeTeamScore: number,
+    awayTeamScore: number,
+    currentMessage?: string | null,
   } | null,
 };
 
@@ -146,8 +150,9 @@ export type ListGamesQuery = {
       name: string,
       picId: string,
     },
-    homeTeamScore?: number | null,
-    awayTeamScore?: number | null,
+    homeTeamScore: number,
+    awayTeamScore: number,
+    currentMessage?: string | null,
   } | null >,
 };
 
@@ -173,7 +178,8 @@ export type OnUpdateAndPublishGameEventSubscription = {
       name: string,
       picId: string,
     },
-    homeTeamScore?: number | null,
-    awayTeamScore?: number | null,
+    homeTeamScore: number,
+    awayTeamScore: number,
+    currentMessage?: string | null,
   } | null,
 };

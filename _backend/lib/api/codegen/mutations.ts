@@ -8,7 +8,7 @@ type GeneratedMutation<InputType, OutputType> = string & {
   __generatedMutationOutput: OutputType;
 };
 
-export const createGame = /* GraphQL */ `mutation CreateGame($input: CreateGameInput) {
+export const createGame = /* GraphQL */ `mutation CreateGame($input: CreateGameInput!) {
   createGame(input: $input) {
     id
     createdAt
@@ -28,6 +28,7 @@ export const createGame = /* GraphQL */ `mutation CreateGame($input: CreateGameI
     }
     homeTeamScore
     awayTeamScore
+    currentMessage
     __typename
   }
 }
@@ -35,7 +36,7 @@ export const createGame = /* GraphQL */ `mutation CreateGame($input: CreateGameI
   APITypes.CreateGameMutationVariables,
   APITypes.CreateGameMutation
 >;
-export const updateAndPublishGameEvent = /* GraphQL */ `mutation UpdateAndPublishGameEvent($input: PublishGameEventInput) {
+export const updateAndPublishGameEvent = /* GraphQL */ `mutation UpdateAndPublishGameEvent($input: PublishGameEventInput!) {
   updateAndPublishGameEvent(input: $input) {
     id
     createdAt
@@ -55,6 +56,7 @@ export const updateAndPublishGameEvent = /* GraphQL */ `mutation UpdateAndPublis
     }
     homeTeamScore
     awayTeamScore
+    currentMessage
     __typename
   }
 }

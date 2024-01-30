@@ -1,5 +1,4 @@
 import { CreateGameMutationVariables, Game } from './../codegen/API'
-
 import { Context, util } from '@aws-appsync/utils'
 import * as ddb from '@aws-appsync/utils/dynamodb'
 
@@ -13,10 +12,10 @@ export function request(ctx: Context<CreateGameMutationVariables>) {
 		createdAt: now,
 		updatedAt: now,
 		...ctx.args.input,
-	}
+		awayTeamScore: 0,
+		homeTeamScore: 0,
+	} as Game
 
-	// only signed in users can use this route based on schema.
-	// create a new todo.
 	return ddb.put({
 		key: { id },
 		item,

@@ -1,11 +1,11 @@
 type Query {
-	getGame(id: ID!): Game
-	listGames: [Game]!
+	getGame(id: ID!): Game @aws_cognito_user_pools
+	listGames: [Game]! @aws_cognito_user_pools
 }
 
 type Mutation {
-	createGame(input: CreateGameInput): Game
-	updateAndPublishGameEvent(input: PublishGameEventInput): Game
+	createGame(input: CreateGameInput!): Game @aws_cognito_user_pools
+	updateAndPublishGameEvent(input: PublishGameEventInput!): Game
 		@aws_cognito_user_pools
 }
 
@@ -22,8 +22,9 @@ type Game {
 	name: String!
 	homeTeam: Team!
 	awayTeam: Team!
-	homeTeamScore: Int
-	awayTeamScore: Int
+	homeTeamScore: Int!
+	awayTeamScore: Int!
+	currentMessage: String
 }
 
 type Team {
@@ -46,7 +47,7 @@ input TeamIput {
 
 input PublishGameEventInput {
 	id: String!
-	homeTeamScore: Int
-	awayTeamScore: Int
-	currentMessage: String
+	homeTeamScore: Int!
+	awayTeamScore: Int!
+	currentMessage: String!
 }
