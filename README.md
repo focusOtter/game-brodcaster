@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Game Broadcaster
 
-## Getting Started
+Welcome to the Game Broadcaster repository, a full-stack monorepo designed for live game streaming enthusiasts. This repository integrates modern web technologies and AWS services to provide a seamless broadcasting experience.
 
-First, run the development server:
+- **YouTube Video**: For a detailed walkthrough, check out my [YouTube Video](https://youtu.be/s2ew8-D7SYY).
+- **Blog Post**: Learn more about the integration of AWS AppSync and Amazon EventBridge in my [blog post](https://blog.focusotter.com/how-aws-appsync-and-amazon-eventbridge-unlock-real-time-data-across-domains)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Game Broadcaster is a fullstack application with a frontend built using NextJS and a backend orchestrated through the AWS Cloud Development Kit (CDK). It offers a UI styled with Tailwind and DaisyUI, and leverages the AWS Amplify JavaScript libraries for enhanced functionality.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Though this repo is setup to
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Key Features
 
-## Learn More
+- **Frontend**: Developed with NextJS, offering a fast, server-side rendered experience.
+- **Backend**: Built using AWS CDK for efficient cloud infrastructure management.
+- **Authentication**: Secured with Amazon Cognito.
+- **API**: Managed through AWS AppSync.
+- **Data Storage**: Utilizes DynamoDB for reliable and scalable storage.
+- **Real-Time Data Handling**: Features a pipeline resolver in AppSync that integrates with DynamoDB and Amazon EventBridge for real-time data processing.
 
-To learn more about Next.js, take a look at the following resources:
+- **Fullstack Tutorial**: For learning other CRUD operations or the construction of a similar fullstack application, visit [Fullstack NextJS CDK Starter](https://github.com/focusOtter/fullstack-nextjs-cdk-starter/tree/main).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To deploy this application:
 
-## Deploy on Vercel
+1. **Initial Setup**: Clone the repository and navigate to the root of the application.
+2. **Install Dependencies**: Run `npm install` in the root directory.
+3. **Backend Setup**: Change to the `_backend` directory and execute `npm install`.
+4. **Deploy Backend**: Use the scripts in the backend's `package.json` or run `npx aws-cdk deploy` for deployment to AWS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributions
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Contributions to the Game Broadcaster project are welcome! Please submit an issue or [ping me online](https://focusotter.com)!
