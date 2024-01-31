@@ -24,7 +24,7 @@ type Game {
 	awayTeam: Team!
 	homeTeamScore: Int!
 	awayTeamScore: Int!
-	currentMessage: String
+	currentMessage: String!
 }
 
 type Team {

@@ -24,7 +24,7 @@ export type Game = {
   awayTeam: Team,
   homeTeamScore: number,
   awayTeamScore: number,
-  currentMessage?: string | null,
+  currentMessage: string,
 };
 
 export type Team = {
@@ -66,7 +66,7 @@ export type CreateGameMutation = {
     },
     homeTeamScore: number,
     awayTeamScore: number,
-    currentMessage?: string | null,
+    currentMessage: string,
   } | null,
 };
 
@@ -95,7 +95,7 @@ export type UpdateAndPublishGameEventMutation = {
     },
     homeTeamScore: number,
     awayTeamScore: number,
-    currentMessage?: string | null,
+    currentMessage: string,
   } | null,
 };
 
@@ -124,7 +124,7 @@ export type GetGameQuery = {
     },
     homeTeamScore: number,
     awayTeamScore: number,
-    currentMessage?: string | null,
+    currentMessage: string,
   } | null,
 };
 
@@ -152,7 +152,7 @@ export type ListGamesQuery = {
     },
     homeTeamScore: number,
     awayTeamScore: number,
-    currentMessage?: string | null,
+    currentMessage: string,
   } | null >,
 };
 
@@ -180,6 +180,6 @@ export type OnUpdateAndPublishGameEventSubscription = {
     },
     homeTeamScore: number,
     awayTeamScore: number,
-    currentMessage?: string | null,
+    currentMessage: string,
   } | null,
 };

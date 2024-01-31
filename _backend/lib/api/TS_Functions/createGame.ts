@@ -14,6 +14,7 @@ export function request(ctx: Context<CreateGameMutationVariables>) {
 		...ctx.args.input,
 		awayTeamScore: 0,
 		homeTeamScore: 0,
+		currentMessage: '',
 	} as Game
 
 	return ddb.put({

@@ -51,6 +51,14 @@ export const createAppSyncAPI = (scope: Construct, props: AppSyncAPIProps) => {
 		code: Code.fromAsset(path.join(__dirname, 'JS_Functions/publishToEB.js')),
 	})
 
+	api.createResolver('updateAndPublishGameEventResolver', {
+		typeName: 'Mutation',
+		fieldName: 'updateAndPublishGameEvent',
+		pipelineConfig: [updateGameFunc, publishToEBFunc],
+		runtime: FunctionRuntime.JS_1_0_0,
+		code: Code.fromAsset(path.join(__dirname, 'JS_Functions/pipeline.js')),
+	})
+
 	api.createResolver('getGameResolver', {
 		typeName: 'Query',
 		fieldName: 'getGame',
@@ -73,14 +81,6 @@ export const createAppSyncAPI = (scope: Construct, props: AppSyncAPIProps) => {
 		runtime: FunctionRuntime.JS_1_0_0,
 		code: Code.fromAsset(path.join(__dirname, 'JS_Functions/createGame.js')),
 		dataSource: gameTableDS,
-	})
-
-	api.createResolver('updateAndPublishGameEventResolver', {
-		typeName: 'Mutation',
-		fieldName: 'updateAndPublishGameEvent',
-		pipelineConfig: [updateGameFunc, publishToEBFunc],
-		runtime: FunctionRuntime.JS_1_0_0,
-		code: Code.fromAsset(path.join(__dirname, 'JS_Functions/pipeline.js')),
 	})
 
 	return api

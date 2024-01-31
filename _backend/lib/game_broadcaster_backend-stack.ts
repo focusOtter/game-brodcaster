@@ -23,5 +23,25 @@ export class GameBroadcasterBackendStack extends cdk.Stack {
 			userPool: auth.userPool,
 			defaultBusArn,
 		})
+
+		new cdk.CfnOutput(this, 'GraphQLAPIURL', {
+			value: api.graphqlUrl,
+		})
+		new cdk.CfnOutput(this, 'GraphQLAPIID', {
+			value: api.apiId,
+		})
+		new cdk.CfnOutput(this, 'UserPoolId', {
+			value: auth.userPool.userPoolId,
+		})
+		new cdk.CfnOutput(this, 'UserPoolClientId', {
+			value: auth.userPoolClient.userPoolClientId,
+		})
+		new cdk.CfnOutput(this, 'IdentityPoolId', {
+			value: auth.identityPool.identityPoolId,
+		})
+
+		new cdk.CfnOutput(this, 'Region', {
+			value: this.region,
+		})
 	}
 }
