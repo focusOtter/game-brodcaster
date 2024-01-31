@@ -1,4 +1,5 @@
 # Game Broadcaster
+
 ![YouTube Thumbnail Add a heading](https://github.com/focusOtter/game-brodcaster/assets/5106417/5b5e5eca-af85-42be-add8-a9d7db87bd69)
 
 Welcome to the Game Broadcaster repository, a full-stack monorepo designed for live game streaming enthusiasts. This repository integrates modern web technologies and AWS services to provide a seamless broadcasting experience.
@@ -9,7 +10,6 @@ Welcome to the Game Broadcaster repository, a full-stack monorepo designed for l
 ## Overview
 
 ![image](https://github.com/focusOtter/game-brodcaster/assets/5106417/e9d9d73f-aa9e-4edc-89fc-f70aa0872d39)
-
 
 Game Broadcaster is a fullstack application with a frontend built using NextJS and a backend orchestrated through the AWS Cloud Development Kit (CDK). It offers a UI styled with Tailwind and DaisyUI, and leverages the AWS Amplify JavaScript libraries for enhanced functionality.
 
@@ -34,6 +34,12 @@ To deploy this application:
 2. **Install Dependencies**: Run `npm install` in the root directory.
 3. **Backend Setup**: Change to the `_backend` directory and execute `npm install`.
 4. **Deploy Backend**: Use the scripts in the backend's `package.json` or run `npx aws-cdk deploy` for deployment to AWS.
+
+## Testing
+
+When making requests in the AWS AppSync console, logs are captured in Cloudwatch. However, this repo is made to be deployed alongside it's consuming app. For that reason, the best way to test this out is to deploy both applications and run both frontend with `npm run dev`.
+
+From there, make requests from one app and observe the event show up in real-time on the other.
 
 ## Contributions
 
