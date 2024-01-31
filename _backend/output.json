@@ -1,10 +1,10 @@
 {
-  "GameBroadcasterBackendStack": {
-    "GraphQLAPIID": "koz4xvtptrezxmkz7kc6b3g5oa",
-    "UserPoolClientId": "f2t2ourhg75noin76g60ha0kg",
-    "UserPoolId": "us-east-1_jYemMaj0y",
-    "GraphQLAPIURL": "https://mbnb2vbf55astnypug64up4roa.appsync-api.us-east-1.amazonaws.com/graphql",
-    "Region": "us-east-1",
-    "IdentityPoolId": "us-east-1:adbf46b8-2aba-488c-8f85-a645bc3b074f"
-  }
+	"GameBroadcasterBackendStack": {
+		"GraphQLAPIID": "sample",
+		"UserPoolClientId": "sample",
+		"UserPoolId": "sample",
+		"GraphQLAPIURL": "sample",
+		"Region": "us-east-1",
+		"IdentityPoolId": "sample"
+	}
 }
