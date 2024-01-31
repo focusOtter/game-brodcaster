@@ -1,4 +1,5 @@
 # Game Broadcaster
+![YouTube Thumbnail Add a heading](https://github.com/focusOtter/game-brodcaster/assets/5106417/5b5e5eca-af85-42be-add8-a9d7db87bd69)
 
 Welcome to the Game Broadcaster repository, a full-stack monorepo designed for live game streaming enthusiasts. This repository integrates modern web technologies and AWS services to provide a seamless broadcasting experience.
 
@@ -6,6 +7,9 @@ Welcome to the Game Broadcaster repository, a full-stack monorepo designed for l
 - **Blog Post**: Learn more about the integration of AWS AppSync and Amazon EventBridge in my [blog post](https://blog.focusotter.com/how-aws-appsync-and-amazon-eventbridge-unlock-real-time-data-across-domains)
 
 ## Overview
+
+![image](https://github.com/focusOtter/game-brodcaster/assets/5106417/e9d9d73f-aa9e-4edc-89fc-f70aa0872d39)
+
 
 Game Broadcaster is a fullstack application with a frontend built using NextJS and a backend orchestrated through the AWS Cloud Development Kit (CDK). It offers a UI styled with Tailwind and DaisyUI, and leverages the AWS Amplify JavaScript libraries for enhanced functionality.
 
