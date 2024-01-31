@@ -7,6 +7,8 @@ Welcome to the Game Broadcaster repository, a full-stack monorepo designed for l
 - **YouTube Video**: For a detailed walkthrough, check out my [YouTube Video](https://youtu.be/s2ew8-D7SYY).
 - **Blog Post**: Learn more about the integration of AWS AppSync and Amazon EventBridge in my [blog post](https://blog.focusotter.com/how-aws-appsync-and-amazon-eventbridge-unlock-real-time-data-across-domains)
 
+- This post is made to go with the [Event Receiver application](https://github.com/focusOtter/game-receiver)
+
 ## Overview
 
 ![image](https://github.com/focusOtter/game-brodcaster/assets/5106417/e9d9d73f-aa9e-4edc-89fc-f70aa0872d39)
@@ -39,6 +41,8 @@ To deploy this application:
 <img width="1491" alt="image" src="https://github.com/focusOtter/game-brodcaster/assets/5106417/fa691f97-44fa-42a2-b0a5-89acfa11fca0">
 
 When making requests in the AWS AppSync console, logs are captured in Cloudwatch. However, this repo is made to be deployed alongside it's consuming app. For that reason, the best way to test this out is to deploy both applications and run both frontend with `npm run dev`.
+
+This post is made to go with the [Event Receiver application](https://github.com/focusOtter/game-receiver)
 
 From there, make requests from one app and observe the event show up in real-time on the other.
 
