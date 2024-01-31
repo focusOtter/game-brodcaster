@@ -36,6 +36,7 @@ To deploy this application:
 4. **Deploy Backend**: Use the scripts in the backend's `package.json` or run `npx aws-cdk deploy` for deployment to AWS.
 
 ## Testing
+<img width="1491" alt="image" src="https://github.com/focusOtter/game-brodcaster/assets/5106417/fa691f97-44fa-42a2-b0a5-89acfa11fca0">
 
 When making requests in the AWS AppSync console, logs are captured in Cloudwatch. However, this repo is made to be deployed alongside it's consuming app. For that reason, the best way to test this out is to deploy both applications and run both frontend with `npm run dev`.
 
